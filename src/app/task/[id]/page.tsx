@@ -94,7 +94,10 @@ export default function TaskDetailPage({ params }: { params: Promise<{ id: strin
               ))}
             </div>
 
-            <button id="btn-bid" className="btn-glow w-full py-3.5 rounded-xl text-white font-bold text-base flex items-center justify-center gap-2">
+            <Link href={`/checkout/${task.id}`} id="btn-checkout" className="btn btn-primary btn-full mt-4" style={{ padding: '16px', fontSize: 16, textDecoration: 'none' }}>
+              <Shield size={17} /> 預付託管資金
+            </Link>
+            <button id="btn-bid" className="btn btn-amber btn-full mt-3" style={{ padding: '16px', fontSize: 16 }}>
               <Zap size={17} /> 立即投標報價
             </button>
             <Link href={`/chat/${task.id}`} id="btn-chat" className="block">
